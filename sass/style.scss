@@ -1,0 +1,114 @@
+@use './colors.scss' as *;
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+html {
+	font-size: 62.5%;
+}
+body {
+	font-family: 'Poppins', sans-serif;
+}
+.wrapper {
+	width: 80%;
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+.intro {
+	padding: 5em 0;
+	text-align: center;
+	color: $dark-blue;
+	&__upper-title {
+		font-size: 2rem;
+		font-weight: 200;
+	}
+	&__lower-title {
+		margin-bottom: 1em;
+		font-size: 2rem;
+	}
+	&__text {
+		font-size: 1.4rem;
+		opacity: 0.6;
+	}
+}
+
+.cards {
+	color: $dark-blue;
+
+	.styles {
+		position: relative;
+		max-width: 400px;
+		margin: 0 auto 3em;
+		padding: 3em 2em 10em;
+		border-radius: 5px;
+		box-shadow: 1px 1px 10px $cyan;
+		.title {
+			margin-bottom: 0.5em;
+		}
+		.text {
+			font-size: 1.1rem;
+			opacity: 0.6;
+		}
+		.icon {
+			position: absolute;
+			bottom: 0;
+			right: 0;
+			margin-right: 2em;
+			margin-bottom: 2em;
+			width: 50px;
+		}
+	}
+
+	&__supervisor {
+		border-top: 4px solid $cyan;
+	}
+	&__team-builder {
+		border-top: 4px solid $red;
+	}
+	&__karma {
+		border-top: 4px solid $orange;
+	}
+	&__calculator {
+		border-top: 4px solid $blue;
+	}
+}
+
+@media (min-width: 1200px) {
+	.intro {
+		&__upper-title,
+		&__lower-title {
+			font-size: 2.6rem;
+		}
+		&__text {
+			font-size: 1.6rem;
+			width: 50%;
+			margin: 0 auto;
+		}
+	}
+	.cards {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		.styles {
+			margin: 2em;
+			height: 200px;
+		}
+		.styles:hover {
+			transform: scale(1.2);
+			transition: transform 0.3s;
+		}
+
+		&__supervisor {
+			align-self: center;
+			width: 370px;
+		}
+
+		&__calculator {
+			align-self: center;
+		}
+	}
+}
